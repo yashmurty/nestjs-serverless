@@ -35,6 +35,11 @@ $ npm run start:dev
 $ npm run start:prod
 ```
 
+## Running the app in serverless offline mode
+```bash
+$ npm run sls-offline
+```
+
 ## Test
 
 ```bash
