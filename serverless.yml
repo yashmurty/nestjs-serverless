@@ -22,5 +22,9 @@ functions:
     events:
     - http:
         cors: true
+        path: '/'
+        method: any
+    - http:
+        cors: true
         path: '{proxy+}'
         method: any
