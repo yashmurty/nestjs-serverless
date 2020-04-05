@@ -22,7 +22,7 @@ This is a proof-of-concept app which utilizes the following projects/technologie
 - `DynamoDB` - Add support in `serverless` YAML file.
 - `Swagger/openapi` - Investigate how to auto-generate it with decorators, etc. (We should not think about maintaining it manually).
 - `Stages` - Configure various deployment stages like `dev`, `stg`, `prd`. 
-- `APIGateway` - Configure domain routing, etc.
+- `APIGateway` - Configure domain routing, etc. via `serverless` resources (we do not need `terraform` if we can do all config via `serverless` YAML.)
 
 ## Installation
 
