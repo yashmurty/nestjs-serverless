@@ -16,7 +16,7 @@ This is a proof-of-concept app which utilizes the following projects/technologie
 | Serverless  | In-Progress  |
 | DynamoDB  | Not Started  |
 
-### Additional Tasks
+### Additional Tasks for PoC
 - `docker-compose` - It would be good to have it for local development. 
     - This would be a good alternative since `serverless offline` does not support hot-reload (at least the way it's implemented right now). This should consider the use of `offline DynamoDB`.
 - `DynamoDB` - Add support in `serverless` YAML file.
