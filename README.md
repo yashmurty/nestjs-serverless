@@ -8,6 +8,7 @@ This is a proof-of-concept app which utilizes the following projects/technologie
 - [DynamoDB](https://aws.amazon.com/dynamodb/) - Fast and flexible NoSQL database service for any scale.
     - Possible use of [DynamoDB DataMapper](https://github.com/awslabs/dynamodb-data-mapper-js)
 
+### Progress
 
 | Technology  | Progress |
 | ------------- | ------------- |
