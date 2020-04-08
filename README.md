@@ -9,7 +9,7 @@ This is a proof-of-concept app which utilizes the following projects/technologie
     - [Provisioned Lambda](https://aws.amazon.com/about-aws/whats-new/2019/12/aws-lambda-announces-provisioned-concurrency/) - We would like to use provisioned lambda this time.
 - [DynamoDB](https://aws.amazon.com/dynamodb/) - Fast and flexible NoSQL database service for any scale.
     - Possible use of [DynamoDB DataMapper](https://github.com/awslabs/dynamodb-data-mapper-js)
-- [AWS Cognito](https://aws.amazon.com/cognito/) - User management?
+- ~~[AWS Cognito](https://aws.amazon.com/cognito/) - User management?~~
     - Currently considering `passwordless authentication` via SMS (`Twilio`).
 
 ### Progress
@@ -25,7 +25,7 @@ This is a proof-of-concept app which utilizes the following projects/technologie
 |  | Lambda deployment | Done  |
 |  | Provisioned Lambda | Not Started  |
 | DynamoDB  | - | Not Started  |
-| AWS Cognito?  | - | Not Started?  |
+| ~~AWS Cognito?~~  | - | Not Started?  |
 
 ### Secondary Tasks for PoC
 - `docker-compose` - It would be good to have it for local development. 
@@ -36,7 +36,7 @@ This is a proof-of-concept app which utilizes the following projects/technologie
 - `APIGateway` - Configure domain routing, etc. via `serverless` resources (we do not need `terraform` if we can do all config via `serverless` YAML.)
 - `CircleCI` - Add `CI/CD` support.
 - `DynamoDB trigger -> GCP BigQuery (or AWS redshift) for Data Analysis`
-- `SMS auth (encrypt phone number if possible)` - Please investigate only the encryption part, auth will be taken care of by Primary Tasks.
+- ~~`SMS auth (encrypt phone number if possible)` - Please investigate only the encryption part, auth will be taken care of by Primary Tasks.~~
 
 ## Installation
 
