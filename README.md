@@ -9,16 +9,23 @@ This is a proof-of-concept app which utilizes the following projects/technologie
     - [Provisioned Lambda](https://aws.amazon.com/about-aws/whats-new/2019/12/aws-lambda-announces-provisioned-concurrency/) - We would like to use provisioned lambda this time.
 - [DynamoDB](https://aws.amazon.com/dynamodb/) - Fast and flexible NoSQL database service for any scale.
     - Possible use of [DynamoDB DataMapper](https://github.com/awslabs/dynamodb-data-mapper-js)
-- [AWS Cognito](https://aws.amazon.com/cognito/) - User management.
+- [AWS Cognito](https://aws.amazon.com/cognito/) - User management?
+    - Currently considering `passwordless authentication` via SMS (`Twilio`).
 
 ### Progress
 
-| Technology  | Progress |
-| ------------- | ------------- |
-| NestJS  | In-Progress  |
-| Serverless  | In-Progress  |
-| DynamoDB  | Not Started  |
-| AWS Cognito  | Not Started  |
+| Technology | Sub-task | Progress |
+| ------------- | ------------- | - |
+| NestJS | - | In-Progress  |
+|  | Initial Setup | Done  |
+|  | Lambda Handler | Done  |
+|  | Auth JWT Generator | Done  |
+|  | SMS Integration | In-Progress  |
+| Serverless | - | In-Progress  |
+|  | Lambda deployment | Done  |
+|  | Provisioned Lambda | Not Started  |
+| DynamoDB  | - | Not Started  |
+| AWS Cognito?  | - | Not Started?  |
 
 ### Secondary Tasks for PoC
 - `docker-compose` - It would be good to have it for local development. 
