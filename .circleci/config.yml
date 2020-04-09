@@ -92,14 +92,14 @@ jobs:
     steps:
       - checkout
       - npm_install
-      - npm_deploy: {environment: dev}
+      - npm_deploy: { environment: dev }
       - slack/status
   deploy_stg:
     executor: default
     steps:
       - checkout
       - npm_install
-      - npm_deploy: {environment: stg}
+      - npm_deploy: { environment: stg }
       - slack/status
   deploy_prd_notification:
     executor: default
@@ -110,7 +110,7 @@ jobs:
     steps:
       - checkout
       - npm_install
-      - npm_deploy: {environment: prd}
+      - npm_deploy: { environment: prd }
       - slack/status
 
 workflows:
