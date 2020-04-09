@@ -2,7 +2,7 @@ service: nestjs-serverless
 
 provider:
   name: aws
-  runtime: nodejs10.x
+  runtime: nodejs12.x
 
 plugins:
   - serverless-domain-manager
