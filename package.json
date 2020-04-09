@@ -10,6 +10,9 @@
   ],
   "private": true,
   "license": "UNLICENSED",
+  "engines": {
+    "node": "12.16.2"
+  },
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "nest build",
@@ -32,7 +35,9 @@
     "test:e2e": "jest --config ./test/jest-e2e.json"
   },
   "dependencies": {
+    "@hapi/joi": "^17.1.1",
     "@nestjs/common": "^7.0.0",
+    "@nestjs/config": "^0.4.0",
     "@nestjs/core": "^7.0.0",
     "@nestjs/jwt": "^7.0.0",
     "@nestjs/passport": "^7.0.0",
@@ -52,6 +57,7 @@
     "@types/aws-lambda": "^8.10.47",
     "@types/aws-serverless-express": "^3.3.3",
     "@types/express": "^4.17.3",
+    "@types/hapi__joi": "^16.0.12",
     "@types/jest": "25.1.4",
     "@types/node": "^13.9.1",
     "@types/passport-jwt": "^3.0.3",
