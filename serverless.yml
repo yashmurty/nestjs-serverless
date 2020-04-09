@@ -26,14 +26,14 @@ functions:
     handler: dist/lambda-main.handler
     provisionedConcurrency: 1
     events:
-    - http:
-        cors: true
-        path: '/'
-        method: any
-    - http:
-        cors: true
-        path: '{proxy+}'
-        method: any
+      - http:
+          cors: true
+          path: '/'
+          method: any
+      - http:
+          cors: true
+          path: '{proxy+}'
+          method: any
 
 resources:
   Resources:
@@ -69,25 +69,25 @@ resources:
       Type: AWS::IAM::Role
       Properties:
         AssumeRolePolicyDocument:
-          Version: "2012-10-17"
+          Version: '2012-10-17'
           Statement:
             - Effect: Allow
               Principal:
                 Service:
                   - cognito-idp.amazonaws.com
               Action:
-                - "sts:AssumeRole"
+                - 'sts:AssumeRole'
               Condition:
                 StringEquals:
                   sts:ExternalId: ${self:provider.stage}-cognito-external-id
         Policies:
           - PolicyName: ${self:provider.stage}-cognito-sms-policy
             PolicyDocument:
-              Version: "2012-10-17"
+              Version: '2012-10-17'
               Statement:
                 - Effect: Allow
                   Resource:
-                    - "*"
+                    - '*'
                   Action:
-                    - "sns:publish"
+                    - 'sns:publish'
         RoleName: ${self:provider.stage}-cognito-sms-role
