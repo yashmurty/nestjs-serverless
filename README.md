@@ -75,3 +75,7 @@ $ npm run test:e2e
 $ npm run test:cov
 ```
 
+## Contributors
+
+- [Yash Murty](https://github.com/yashmurty)
+- [Shogo Mitomo](https://github.com/shogo-mitomo)
