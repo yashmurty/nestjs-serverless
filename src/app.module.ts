@@ -5,10 +5,11 @@ import { AuthModule } from './auth/auth.module'
 import { UsersModule } from './users/users.module'
 import { ConfigModule } from '@nestjs/config'
 import { configModuleOptions } from './config/module-options'
+import { CatsController } from './cats/cats.controller';
 
 @Module({
   imports: [AuthModule, UsersModule, ConfigModule.forRoot(configModuleOptions)],
-  controllers: [AppController],
+  controllers: [AppController, CatsController],
   providers: [AppService],
 })
 export class AppModule {}
