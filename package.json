@@ -10,6 +10,9 @@
   ],
   "private": true,
   "license": "UNLICENSED",
+  "engines": {
+    "node": "12.16.2"
+  },
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "nest build",
