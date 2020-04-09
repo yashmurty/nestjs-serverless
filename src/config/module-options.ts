@@ -13,5 +13,9 @@ export const configModuleOptions: ConfigModuleOptions = {
     // Making the AWS access tokens as required.
     // They will be injected directly in Lambda functions, but we must add them to env locally.
     AWS_ACCESS_KEY_ID: Joi.string().required(),
+    AWS_SECRET_ACCESS_KEY: Joi.string().required(),
+    AWS_SESSION_TOKEN: Joi.string()
+      .allow('')
+      .optional(),
   }),
 }
