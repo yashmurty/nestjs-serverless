@@ -16,12 +16,9 @@ export class AppController {
   @Get()
   getHello(): string {
     console.log('WIP - getHello function')
-    // get an environment variable
+    // TODO @yashmurty : This trying out how to get env vars. Remove this later.
     const dbUser = this.configService.get<string>('DATABASE_USER')
     console.log('dbUser : ', dbUser)
-    // get a custom configuration value
-    const dbHost = this.configService.get<string>('database.host')
-    console.log('dbHost : ', dbHost)
 
     return this.appService.getHello()
   }
