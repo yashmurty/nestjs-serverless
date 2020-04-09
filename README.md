@@ -11,23 +11,31 @@ This is a proof-of-concept app which utilizes the following projects/technologie
     - Possible use of [DynamoDB DataMapper](https://github.com/awslabs/dynamodb-data-mapper-js)
 - ~~[AWS Cognito](https://aws.amazon.com/cognito/) - User management?~~
     - Currently considering `passwordless authentication` via SMS (`Twilio`).
+- Push Notification
+    - Sending messages to all users. Scalability is very important.
+- Push Data
+    - Do we need Data push feature to spread affected people list using tech like Firebase Firestore?
 
 ### Progress
 
-| Technology | Sub-task | Progress |
-| ------------- | ------------- | - |
-| NestJS | - | In-Progress  |
-|  | Initial Setup | Done  |
-|  | Lambda Handler | Done  |
-|  | Auth JWT Generator | Done  |
-|  | SMS Integration | In-Progress  |
-| Serverless | - | Done  |
-|  | Lambda deployment | Done  |
-|  | Provisioned Lambda | Done  |
-| DynamoDB  | - | Not Started  |
-| ~~AWS Cognito?~~  | - | Not Started?  |
-| CI/CD support | - | Done |
-|  | CircleCI | Done |
+| Technology        | Sub-task           | Progress     |
+| ----------------- | ------------------ | ------------ |
+| NestJS            | -                  | In-Progress  |
+|                   | Initial Setup      | Done         |
+|                   | Lambda Handler     | Done         |
+|                   | Auth JWT Generator | Done         |
+|                   | SMS Integration    | In-Progress  |
+| Serverless        | -                  | Done         |
+|                   | Lambda deployment  | Done         |
+|                   | Provisioned Lambda | Done         |
+| DynamoDB          | -                  | Not Started  |
+| ~~AWS Cognito?~~  | -                  | Not Started? |
+| CI/CD support     | -                  | Done         |
+|                   | CircleCI           | Done         |
+| Push Notification | -                  | Not Started  |
+|                   | Pinpoint           | -            |
+| Push Data         | -                  | Not Started  |
+|                   | Firestore          | -            |
 
 ### Secondary Tasks for PoC
 - `docker-compose` - It would be good to have it for local development.
