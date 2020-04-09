@@ -28,13 +28,13 @@ This is a proof-of-concept app which utilizes the following projects/technologie
 | ~~AWS Cognito?~~  | - | Not Started?  |
 
 ### Secondary Tasks for PoC
-- `docker-compose` - It would be good to have it for local development. 
+- `docker-compose` - It would be good to have it for local development.
     - This would be a good alternative since `serverless offline` does not support hot-reload (at least the way it's implemented right now in this repo). This should consider the use of `offline DynamoDB`.
 - `DynamoDB` - Add support in `serverless` YAML file.
 - `Swagger/openapi` - Investigate how to auto-generate it with decorators, etc. (We should not think about maintaining it manually).
-- `Stages` - Configure various deployment stages like `dev`, `stg`, `prd`. 
+- `Stages` - Configure various deployment stages like `dev`, `stg`, `prd`.
 - `APIGateway` - Configure domain routing, etc. via `serverless` resources (we do not need `terraform` if we can do all config via `serverless` YAML.)
-- `CircleCI` - Add `CI/CD` support.
+- ~~`CircleCI` - Add `CI/CD` support.~~ **Done**
 - `DynamoDB trigger -> GCP BigQuery (or AWS redshift) for Data Analysis`
 - ~~`SMS auth (encrypt phone number if possible)` - Please investigate only the encryption part, auth will be taken care of by Primary Tasks.~~
 
