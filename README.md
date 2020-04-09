@@ -26,6 +26,8 @@ This is a proof-of-concept app which utilizes the following projects/technologie
 |  | Provisioned Lambda | Done  |
 | DynamoDB  | - | Not Started  |
 | ~~AWS Cognito?~~  | - | Not Started?  |
+| CI/CD support | - | Done |
+|  | CircleCI | Done |
 
 ### Secondary Tasks for PoC
 - `docker-compose` - It would be good to have it for local development.
@@ -34,7 +36,6 @@ This is a proof-of-concept app which utilizes the following projects/technologie
 - `Swagger/openapi` - Investigate how to auto-generate it with decorators, etc. (We should not think about maintaining it manually).
 - `Stages` - Configure various deployment stages like `dev`, `stg`, `prd`.
 - `APIGateway` - Configure domain routing, etc. via `serverless` resources (we do not need `terraform` if we can do all config via `serverless` YAML.)
-- `CircleCI` - Add `CI/CD` support.
 - `DynamoDB trigger -> GCP BigQuery (or AWS redshift) for Data Analysis`
 - ~~`SMS auth (encrypt phone number if possible)` - Please investigate only the encryption part, auth will be taken care of by Primary Tasks.~~
 
