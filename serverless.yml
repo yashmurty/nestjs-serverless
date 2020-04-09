@@ -19,6 +19,7 @@ package:
 functions:
   lambda-main:
     handler: dist/lambda-main.handler
+    provisionedConcurrency: 1
     events:
     - http:
         cors: true
