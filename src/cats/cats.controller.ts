@@ -1,6 +1,6 @@
-import { Controller, Post, Body } from '@nestjs/common';
-import { CreateCatDto } from './dto/create-cat.dto';
-import { CatsService } from './cats.service';
+import { Controller, Post, Body } from '@nestjs/common'
+import { CreateCatDto } from './dto/create-cat.dto'
+import { CatsService } from './cats.service'
 
 @Controller('cats')
 export class CatsController {
@@ -8,6 +8,6 @@ export class CatsController {
 
   @Post()
   async create(@Body() createCatDto: CreateCatDto) {
-    this.catsService.create(createCatDto);
+    this.catsService.create(createCatDto)
   }
 }

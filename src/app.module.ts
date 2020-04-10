@@ -5,8 +5,8 @@ import { AuthModule } from './auth/auth.module'
 import { UsersModule } from './users/users.module'
 import { ConfigModule } from '@nestjs/config'
 import { configModuleOptions } from './config/module-options'
-import { CatsController } from './cats/cats.controller';
-import { CatsService } from './cats/cats.service';
+import { CatsController } from './cats/cats.controller'
+import { CatsService } from './cats/cats.service'
 
 @Module({
   imports: [AuthModule, UsersModule, ConfigModule.forRoot(configModuleOptions)],
