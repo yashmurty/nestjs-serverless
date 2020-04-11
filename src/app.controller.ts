@@ -37,8 +37,14 @@ export class AppController {
   }
 
   @UseGuards(CustomFirebaseLoginGuard)
-  @Post('auth/login/custom')
-  async loginCustom(@Request() req) {
-    return this.authService.login(req.user)
+  @Post('auth/login/custom-firebase')
+  async loginCustomFirebase(@Request() req) {
+    return req.user
+  }
+
+  @UseGuards(JwtAuthGuard)
+  @Get('profile/custom-firebase')
+  getProfileCustomFirebase(@Request() req) {
+    return req.user
   }
 }
