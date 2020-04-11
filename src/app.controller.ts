@@ -42,9 +42,10 @@ export class AppController {
     return req.user
   }
 
-  @UseGuards(JwtAuthGuard)
-  @Get('profile/custom-firebase')
-  getProfileCustomFirebase(@Request() req) {
-    return req.user
-  }
+  // TODO @yashmurty : Update this to be CustomFirebaseJWTGuard
+  // @UseGuards(CustomFirebaseLoginGuard)
+  // @Get('profile/custom-firebase')
+  // getProfileCustomFirebase(@Request() req) {
+  //   return req.user
+  // }
 }
