@@ -2,4 +2,4 @@ import { Injectable } from '@nestjs/common'
 import { AuthGuard } from '@nestjs/passport'
 
 @Injectable()
-export class CustomFirebaseLoginGuard extends AuthGuard('custom-firebase-login') {}
+export class FirebaseNormalUserValidateGuard extends AuthGuard('firebase-normal-user-validate') {}

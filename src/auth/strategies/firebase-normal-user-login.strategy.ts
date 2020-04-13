@@ -6,9 +6,9 @@ import { Request } from 'express'
 import * as firebaseAdmin from 'firebase-admin'
 
 @Injectable()
-export class CustomFirebaseLoginStrategy extends PassportStrategy(
+export class FirebaseNormalUserLoginStrategy extends PassportStrategy(
   Strategy,
-  'custom-firebase-login'
+  'firebase-normal-user-login'
 ) {
   async validate(req: Request, done: VerifiedCallback): Promise<any> {
     const extractorFunction = ExtractJwt.fromAuthHeaderAsBearerToken()
