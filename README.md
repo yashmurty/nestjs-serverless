@@ -10,7 +10,8 @@ This is a proof-of-concept app which utilizes the following projects/technologie
 - [DynamoDB](https://aws.amazon.com/dynamodb/) - Fast and flexible NoSQL database service for any scale.
     - Possible use of [DynamoDB DataMapper](https://github.com/awslabs/dynamodb-data-mapper-js)
 - ~~[AWS Cognito](https://aws.amazon.com/cognito/) - User management?~~
-    - Currently considering `passwordless authentication` via SMS (`Twilio`).
+    - ~~Currently considering `passwordless authentication` via SMS (`Twilio`).~~
+    - We now have an implementation of `Firebase Auth` `Guard`.
 - Push Notification
     - Sending messages to all users. Scalability is very important.
 - Push Data

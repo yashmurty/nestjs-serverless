@@ -12,9 +12,11 @@ let cachedServer: Server
 const bootstrapServer = async (): Promise<Server> => {
   const expressApp = express()
   const adapter = new ExpressAdapter(expressApp)
+
   const app = await NestFactory.create(AppModule, adapter)
   app.use(eventContext())
   app.enableCors()
+
   await app.init()
   return createServer(expressApp)
 }
