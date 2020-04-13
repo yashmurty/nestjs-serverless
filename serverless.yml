@@ -5,12 +5,12 @@ provider:
   runtime: nodejs12.x
 
 plugins:
-  - serverless-domain-manager
+  # - serverless-domain-manager
   - serverless-offline
 
-custom:
-  customDomain:
-    domainName: nestjs-serverless.example.com
+# custom:
+#   customDomain:
+#     domainName: nestjs-serverless.example.com
 
 package:
   exclude:
