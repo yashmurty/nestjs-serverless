@@ -1,6 +1,6 @@
 import { Controller, Get, Request, Post, UseGuards } from '@nestjs/common'
 import { AppService } from './app.service'
-import { CustomFirebaseLoginGuard } from './auth/guards/custom-firebase-login.guard'
+import { FirebaseNormalUserLoginGuard } from './auth/guards/firebase-normal-user-login.guard'
 import { AuthService } from './auth/auth.service'
 import { ConfigService } from '@nestjs/config'
 
@@ -22,14 +22,14 @@ export class AppController {
     return this.appService.getHello()
   }
 
-  @UseGuards(CustomFirebaseLoginGuard)
+  @UseGuards(FirebaseNormalUserLoginGuard)
   @Post('auth/login')
   async loginCustomFirebase(@Request() req) {
     return req.user
   }
 
-  // TODO @yashmurty : Update this to be CustomFirebaseJWTGuard
-  // @UseGuards(CustomFirebaseLoginGuard)
+  // TODO @yashmurty : Update this to be FirebaseNormalUserLoginGuard
+  // @UseGuards(FirebaseNormalUserLoginGuard)
   // @Get('profile/custom-firebase')
   // getProfileCustomFirebase(@Request() req) {
   //   return req.user
