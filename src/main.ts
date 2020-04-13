@@ -21,6 +21,7 @@ async function bootstrap() {
     .setTitle('nestjs-serverless')
     .setDescription('SwaggerUI for nestjs-serverless API')
     .setVersion('1.0')
+    .addBearerAuth()
     .build()
   const document = SwaggerModule.createDocument(app, options)
   SwaggerModule.setup('swagger', app, document)

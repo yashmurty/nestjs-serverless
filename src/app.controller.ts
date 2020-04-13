@@ -1,6 +1,5 @@
 import { Controller, Get, Request, Post, UseGuards } from '@nestjs/common'
 import { AppService } from './app.service'
-import { FirebaseNormalUserLoginGuard } from './auth/guards/firebase-normal-user-login.guard'
 import { FirebaseNormalUserValidateGuard } from './auth/guards/firebase-normal-user-validate.guard'
 import { AuthService } from './auth/auth.service'
 import { ConfigService } from '@nestjs/config'
@@ -21,12 +20,6 @@ export class AppController {
     console.log('dbUser : ', dbUser)
 
     return this.appService.getHello()
-  }
-
-  @UseGuards(FirebaseNormalUserLoginGuard)
-  @Post('auth/login')
-  async loginFirebase(@Request() req) {
-    return req.user
   }
 
   @UseGuards(FirebaseNormalUserValidateGuard)
