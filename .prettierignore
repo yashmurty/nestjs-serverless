@@ -12,7 +12,6 @@ test/keys
 .temp
 *.iml
 .nvmrc
-*.md
 coverage
 .nyc_output
 .npmrc
