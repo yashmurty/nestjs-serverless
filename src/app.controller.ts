@@ -1,8 +1,9 @@
 import { Controller, Get, Request, Post, UseGuards } from '@nestjs/common'
 import { AppService } from './app.service'
-import { FirebaseNormalUserValidateGuard } from './auth/guards/firebase-normal-user-validate.guard'
 import { AuthService } from './auth/auth.service'
 import { ConfigService } from '@nestjs/config'
+import { LocalAuthGuard } from './auth/guards/local-auth.guard'
+import { JwtAuthGuard } from './auth/guards/jwt-auth.guard'
 
 @Controller()
 export class AppController {
@@ -12,19 +13,15 @@ export class AppController {
     private configService: ConfigService
   ) {}
 
-  @Get()
-  getHello(): string {
-    console.log('WIP - getHello function')
-    // TODO @yashmurty : This trying out how to get env vars. Remove this later.
-    const dbUser = this.configService.get<string>('DATABASE_USER')
-    console.log('dbUser : ', dbUser)
-
-    return this.appService.getHello()
+  @UseGuards(LocalAuthGuard)
+  @Post('auth/login')
+  async login(@Request() req) {
+    return this.authService.login(req.user)
   }
 
-  @UseGuards(FirebaseNormalUserValidateGuard)
+  @UseGuards(JwtAuthGuard)
   @Get('profile')
-  getProfileFirebase(@Request() req) {
+  getProfile(@Request() req) {
     return req.user
   }
 }
