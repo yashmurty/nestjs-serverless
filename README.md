@@ -21,7 +21,9 @@ This is a proof-of-concept app which utilizes the following projects/technologie
 | Database      | -                 | Not Started |
 |               | RDS               | Not Started |
 |               | TypeORM           | Not Started |
-| Logger        | Winston           | Done        |
+| Logger        | -                 | Done        |
+|               | Winston           | Done        |
+|               | ResponseTime      | Done        |
 | Swagger       | -                 | In-Progress |
 
 ### Secondary Tasks for PoC
