@@ -6,35 +6,23 @@ This is a proof-of-concept app which utilizes the following projects/technologie
 
 - [NestJS](https://github.com/nestjs/nest) - NodeJS Framework.
 - [Serverless](https://github.com/serverless/serverless) - Build applications with serverless architectures using AWS Lambda.
-  - [Provisioned Lambda](https://aws.amazon.com/about-aws/whats-new/2019/12/aws-lambda-announces-provisioned-concurrency/) - We would like to use provisioned lambda this time.
-- [Cloud Firestore](https://firebase.google.com/docs/firestore) - flexible, scalable NoSQL cloud database.
-- [Firebase Auth](https://firebase.google.com/docs/auth) - User management
-  - We now have an implementation of `Firebase Auth` `Guard`.
-- Push Notification
-  - Sending messages to all users. Scalability is very important.
-- Push Data
-  - Do we need Data push feature to spread affected people list using tech like Firebase Firestore?
 
 ### Progress
 
-| Technology        | Sub-task           | Progress    |
-| ----------------- | ------------------ | ----------- |
-| NestJS            | -                  | In-Progress |
-|                   | Initial Setup      | Done        |
-|                   | Lambda Handler     | Done        |
-|                   | Auth JWT Generator | Done        |
-|                   | SMS Integration    | In-Progress |
-| Serverless        | -                  | Done        |
-|                   | Lambda deployment  | Done        |
-|                   | Provisioned Lambda | Done        |
-| Firestore         | -                  | Not Started |
-| Firebase Auth     | -                  | Done        |
-| CI/CD support     | -                  | Done        |
-|                   | CircleCI           | Done        |
-| Push Notification | -                  | Not Started |
-|                   | Pinpoint           | -           |
-| Push Data         | -                  | Not Started |
-|                   | Firestore          | -           |
+| Technology    | Sub-task           | Progress    |
+| ------------- | ------------------ | ----------- |
+| NestJS        | -                  | In-Progress |
+|               | Initial Setup      | Done        |
+|               | Lambda Handler     | Done        |
+|               | Auth JWT           | Done        |
+| Serverless    | -                  | Done        |
+|               | Lambda deployment  | Done        |
+|               | Provisioned Lambda | Done        |
+| CI/CD support | -                  | Done        |
+|               | CircleCI           | Done        |
+| Database      | RDS                | Not Started |
+|               | TypeORM            | Not Started |
+| Logger        | Winston            | Not Started |
 
 ### Secondary Tasks for PoC
 

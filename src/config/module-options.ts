@@ -17,6 +17,5 @@ export const configModuleOptions: ConfigModuleOptions = {
     AWS_SESSION_TOKEN: Joi.string()
       .allow('')
       .optional(),
-    FIREBASE_DATABASE_URL: Joi.string().required(),
   }),
 }
