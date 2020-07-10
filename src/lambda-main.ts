@@ -6,6 +6,8 @@ import { ExpressAdapter } from '@nestjs/platform-express'
 import { createServer, proxy } from 'aws-serverless-express'
 import { eventContext } from 'aws-serverless-express/middleware'
 import * as express from 'express'
+import { AppLogger } from './shared/logger/logger.service'
+import { RequestIdMiddleware } from './shared/middleware/request-id.middleware'
 
 let cachedServer: Server
 
@@ -13,7 +15,12 @@ const bootstrapServer = async (): Promise<Server> => {
   const expressApp = express()
   const adapter = new ExpressAdapter(expressApp)
 
-  const app = await NestFactory.create(AppModule, adapter)
+  const app = await NestFactory.create(AppModule, adapter, {
+    logger: false,
+  })
+  app.useLogger(new AppLogger())
+  app.use(RequestIdMiddleware)
+
   app.use(eventContext())
   app.enableCors()
 
