@@ -7,7 +7,7 @@ export class AuthService {
   constructor(private usersService: UsersService, private jwtService: JwtService) {}
 
   async validateUser(username: string, pass: string): Promise<any> {
-    const user = await this.usersService.findOne(username)
+    const user = await this.usersService.findOneByUsername(username)
     if (user && user.password === pass) {
       const { password, ...result } = user
       return result
