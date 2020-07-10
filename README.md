@@ -40,13 +40,46 @@ This is a proof-of-concept app which utilizes the following projects/technologie
 - `Stages` - Configure various deployment stages like `dev`, `stg`, `prd`.
 - `TypeORM` - Sample implementation covering TypeORM which uses some database.
 
+## Development Guideline
+
+### Project Layout (Brief Explanation)
+
+```
+.
+├── .env (Make sure to create this file locally and fill the env vars)
+├── src
+│   ├── main.ts (This entry point is used for local server)
+│   ├── lambda-main.ts (This entry point is used for lambda server)
+│   ├── auth (module)
+│   │   ├── guards
+│   │   └── strategies (Implementation of JWT token check)
+│   ├── users (module)
+│   │   ├── users.controller.ts (Controllers call their services)
+│   │   ├── users.service.ts (Services can call other services and their own repository)
+│   │   └── user.repository.ts (Repository should be called only by its parent service)
+│   └── shared (module with shared business logic)
+├── test (Contains the end-to-end (e2e) tests)
+└── serverless.yml (Serverless framework config file for infrastructure deployment)
+```
+
+As mentioned briefly in the project layout for `users`, to keep layout clean, we follow this convention:
+
+1. **Controllers**: HTTP routes map to handler functions in controllers.
+1. **Services**: Controllers call their service function.  
+   A) A `user controller` must call only a `user service`, and not any other service if it can be avoided.  
+   B) A `user service` can call other services like `cats service`, etc.  
+   C) A `user service` must call only a `user repository`, and not any other repository if it can be avoided. If a `user service` wants to modify data in `cats repository`, it must call corresponding `cats service` function to do it.
+1. **Repositories**: Repositories have data layer implementation, ex: `Firestore` in this project. They must be called only by their direct parent service, ex: A `user repository` is called by a `user service`.
+
 ## Installation
 
 ```bash
 $ npm install
 ```
 
-## Running the app
+### Running the Application on Local
+
+Make sure you add the env vars in `.env` file. Just copy the `.env.template` file.
 
 ```bash
 # development
@@ -59,14 +92,22 @@ $ npm run start:dev
 $ npm run start:prod
 ```
 
-## Swagger
+## Demo
 
+- API: http://localhost:3000
 - Swagger UI: http://localhost:3000/swagger
 
 ## Running the app in serverless offline mode
 
 ```bash
 $ npm run sls-offline
+```
+
+### Deployment
+
+```sh
+# deploy to DEV environment
+npm run deploy:dev
 ```
 
 ## Test
