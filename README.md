@@ -9,31 +9,36 @@ This is a proof-of-concept app which utilizes the following projects/technologie
 
 ### Progress
 
-| Technology    | Sub-task          | Progress    |
-| ------------- | ----------------- | ----------- |
-| NestJS        | -                 | In-Progress |
-|               | Initial Setup     | Done        |
-|               | Lambda Handler    | Done        |
-|               | Auth JWT          | Done        |
-| Serverless    | -                 | Done        |
-|               | Lambda deployment | Done        |
-| CI/CD support | CircleCI          | Done        |
-| Database      | -                 | Not Started |
-|               | RDS               | Not Started |
-|               | TypeORM           | Not Started |
-| Logger        | -                 | Done        |
-|               | Winston           | Done        |
-|               | ResponseTime      | Done        |
-| Swagger       | -                 | In-Progress |
+| Technology    | Sub-task               | Progress    |
+| ------------- | ---------------------- | ----------- |
+| NestJS        | -                      | In-Progress |
+|               | Initial Setup          | Done        |
+|               | JWT Auth guard         | Done        |
+|               | Env Config service     | Done        |
+|               | All exceptions filter  | Done        |
+|               | Req/Res interceptor    | Done        |
+|               | Logger service         | Done        |
+|               | Auto-generated Swagger | In-Progress |
+|               | Request ID middleware  | Done        |
+| Serverless    | -                      | Done        |
+|               | Lambda Handler         | Done        |
+|               | Lambda deployment      | Done        |
+| CI/CD support | -                      | Done        |
+|               | CircleCI               | Done        |
+| Database      | -                      | Not Started |
+|               | RDS                    | Not Started |
+|               | TypeORM                | Not Started |
+| Logger        | -                      | Done        |
+|               | Winston                | Done        |
 
-### Secondary Tasks for PoC
+### Remaining Tasks for PoC
 
 - `docker-compose` - It would be good to have it for local development.
 
   - This would be a good alternative since `serverless offline` does not support hot-reload (at least the way it's implemented right now in this repo). This should consider the use of `offline DynamoDB`.
 
 - `Stages` - Configure various deployment stages like `dev`, `stg`, `prd`.
-- `APIGateway` - Configure domain routing, etc. via `serverless` resources (we do not need `terraform` if we can do all config via `serverless` YAML.)
+- `TypeORM` - Sample implementation covering TypeORM which uses some database.
 
 ## Installation
 
@@ -53,6 +58,10 @@ $ npm run start:dev
 # production mode
 $ npm run start:prod
 ```
+
+## Swagger
+
+- Swagger UI: http://localhost:3000/swagger
 
 ## Running the app in serverless offline mode
 
