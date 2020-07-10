@@ -86,3 +86,4 @@ $ npm run test:cov
 
 - [Yash Murty](https://github.com/yashmurty)
 - [Shogo Mitomo](https://github.com/shogo-mitomo)
+- [Daisuke Hirata](https://github.com/DaisukeHirata)
