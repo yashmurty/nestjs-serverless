@@ -1,3 +1,11 @@
+# DEPRECATED
+
+I am no longer working on this repo.
+
+If you are still interested in this NestJS starter, please checkout this other repo on which I am actively contributing. :)
+
+https://github.com/monstar-lab-oss/nestjs-starter-rest-api
+
 # NestJS Serverless App
 
 This is a proof-of-concept app which utilizes the following projects/technologies.
