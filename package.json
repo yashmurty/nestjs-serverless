@@ -41,7 +41,7 @@
     "@nestjs/core": "^7.3.2",
     "@nestjs/jwt": "^7.1.0",
     "@nestjs/passport": "^7.1.0",
-    "@nestjs/platform-express": "^7.3.2",
+    "@nestjs/platform-express": "^9.2.1",
     "@nestjs/swagger": "^4.5.12",
     "aws-serverless-express": "^3.3.8",
     "passport": "^0.4.1",
